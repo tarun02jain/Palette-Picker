@@ -1,0 +1,201 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Muli", sans-serif;
+  color: rgb(51, 51, 51);
+}
+button {
+  font-family: "Muli", sans-serif;
+}
+path,
+i,
+svg {
+  pointer-events: none;
+}
+#pallete{
+  min-height: 78vh;
+  display: flex;
+  color: rgb(212, 212, 212);
+}
+.color{
+  min-height: 78vh;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow: hidden;
+  position: relative;
+  /* background-color: blueviolet; */
+}
+.color h2 {
+  font-size: 2rem;
+  cursor: pointer;
+}
+.slider{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0%;
+  background: rgb(255,255,255,0.5);
+  padding: 1rem;
+  opacity: 0;
+  width: 90%;
+  border-top-right-radius: 1rem;
+  pointer-events: none;
+  border-top-left-radius: 1rem;
+  transform: translateY(100px);
+  transition: all 0.5s ease-in-out;
+}
+.slider span{
+  color: rgb(63, 63, 63);
+  font-weight: 550;
+  font-size: 1rem;
+}
+.slider.active{
+  opacity: 1;
+  transform: translateY(0px);
+  pointer-events: all;
+}
+.slider button,.close-save,.close-library{
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  padding: 0.5rem;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  border: none;
+  background: rgb(73, 73, 73);
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+.controls{
+  display: flex;
+  flex-direction: column;
+}
+.adjust,.lock{
+  font-size: 1.5rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin: 1rem 0rem;
+}
+.panel{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 22vh;
+}
+.library-panel,
+.generate-panel,
+.save-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.panel button{
+  font-size: 1rem;
+  margin: 0.5rem;
+  padding: 1rem 1.9rem;
+  background: rgb(31,33,63);
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 0.7rem;
+}
+.copy-container,.save-container,.library-container{
+  position: fixed;
+  display: flex;
+  top: 0%;
+  left: 0%;
+  background: rgb(0,0,0,0.5);
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.7s ease-in-out;
+  pointer-events: none;
+  opacity: 0;
+}
+.copy-popup,.save-popup,.library-popup{
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 1rem;
+  transition: transform 0.7s ease;
+  transform: translateY(-5rem);
+  min-width: 30%;
+  min-height: 30vh;
+}
+.copy-popup h4,
+.save-popup h4,
+.library-popup h4 {
+  font-size: 1.3rem;
+  padding: 1.5rem;
+}
+.copy-container.active,
+.save-container.active,
+.library-container.active {
+  opacity: 1;
+  pointer-events: all;
+}
+.copy-popup.active,
+.save-popup.active,
+.library-popup.active {
+  transform: translateY(-3rem);
+}
+.panel p{
+  font-size: 1.2rem;
+}
+
+input[type = "range"]{
+  -webkit-appearance: none;
+  margin: 0.3rem 0rem;
+  position: relative;
+  cursor: pointer;
+  border-radius: 0.7rem;
+  width: 100%;
+  height: 0.7rem;
+}
+.save-name{
+  font-size: 1rem;
+  padding: 1rem;
+}
+.library-popup{
+  min-width: 40%;
+  justify-content: flex-start;
+  overflow-y: auto;
+  max-height: 50vh;
+}
+.custom-palette{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+}
+.custom-palette h4{
+  flex: 1;
+}
+.small-preview{
+  display: flex;
+  flex: 1;
+}
+.small-preview div{
+  height: 5rem;
+  width: 3.5rem;
+}
+.select-palette{
+  border: none;
+  padding: 1rem;
+  height: 5rem;
+  background: rgb(48, 47, 47);
+  color: white;
+  cursor: pointer;
+}
