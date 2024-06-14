@@ -2,7 +2,7 @@
 
 ## Overview
 
-Welcome to **Palette Picker**, a web application designed to simplify the process of selecting and managing color palettes. This project showcases a dynamic and interactive user interface, providing users with a seamless experience in creating, adjusting, and saving custom color palettes. The application is built with HTML, CSS, and JavaScript, leveraging advanced CSS techniques and JavaScript libraries to enhance functionality and aesthetics. The application is live [here]{https://tarun02jain.github.io/Palette-Picker/}.
+Welcome to **Palette Picker**, a web application designed to simplify the process of selecting and managing color palettes. This project showcases a dynamic and interactive user interface, providing users with a seamless experience in creating, adjusting, and saving custom color palettes. The application is built with HTML, CSS, and JavaScript, leveraging advanced CSS techniques and JavaScript libraries to enhance functionality and aesthetics. The application is live [here](https://tarun02jain.github.io/Palette-Picker/).
 
 ## Features
 
